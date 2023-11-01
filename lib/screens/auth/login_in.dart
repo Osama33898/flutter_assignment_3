@@ -10,7 +10,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
 
-  // text editing controllers
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
 
@@ -40,7 +39,6 @@ class LoginPage extends StatelessWidget {
     );
   }
 
-  // sign user in method
   Future<void> signUserIn(BuildContext context) async {
 
           
@@ -85,7 +83,6 @@ final String? password = prefs.getString('password');
 
               const SizedBox(height: 50),
 
-              // welcome back, you've been missed!
               Text(
                 'Welcome back you\'ve been missed!',
                 style: TextStyle(
@@ -96,7 +93,6 @@ final String? password = prefs.getString('password');
 
               const SizedBox(height: 25),
 
-              // username textfield
               MyTextField(
                 controller: usernameController,
                 hintText: 'Username',
@@ -105,7 +101,6 @@ final String? password = prefs.getString('password');
 
               const SizedBox(height: 10),
 
-              // password textfield
               MyTextField(
                 controller: passwordController,
                 hintText: 'Password',
@@ -114,7 +109,6 @@ final String? password = prefs.getString('password');
 
               const SizedBox(height: 10),
 
-              // forgot password?
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Row(
@@ -130,7 +124,6 @@ final String? password = prefs.getString('password');
 
               const SizedBox(height: 25),
 
-              // sign in button
               MyButton(
                 onTap: ()=>signUserIn(context),
                 textBtn: 'Log In'
@@ -138,7 +131,6 @@ final String? password = prefs.getString('password');
 
               const SizedBox(height: 50),
 
-              // or continue with
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Row(
@@ -168,7 +160,6 @@ final String? password = prefs.getString('password');
 
               const SizedBox(height: 20),
 
-              // google + apple sign in buttons
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: const [
@@ -184,7 +175,6 @@ final String? password = prefs.getString('password');
 
               const SizedBox(height: 20),
 
-              // not a member? register now
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
