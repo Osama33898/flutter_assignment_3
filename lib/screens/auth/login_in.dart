@@ -1,9 +1,13 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application1/screens/MainPage.dart';
+import 'package:flutter_application1/screens/Post_list.dart';
+
 import 'package:flutter_application1/screens/auth/sign_in.dart';
 import 'package:flutter_application1/screens/auth/widgets/button_custom.dart';
 import 'package:flutter_application1/screens/auth/widgets/image_custom.dart';
 import 'package:flutter_application1/screens/auth/widgets/text_field.dart';
+import 'package:flutter_application1/screens/movies_list/movies_list_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 
@@ -55,7 +59,11 @@ final String? password = prefs.getString('password');
 
             if(user_name==usernameController.text && password==passwordController.text)
             {
-                      _dialogBuilder(context,'Succesfull',"Logged In"); 
+              Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) =>  MainPage()),
+            );
+                      // _dialogBuilder(context,'Succesfull',"Logged In"); 
 
             }
             else{
@@ -122,14 +130,14 @@ final String? password = prefs.getString('password');
                 ),
               ),
 
-              const SizedBox(height: 25),
+              const SizedBox(height: 10),
 
               MyButton(
                 onTap: ()=>signUserIn(context),
                 textBtn: 'Log In'
               ),
 
-              const SizedBox(height: 50),
+              const SizedBox(height: 10),
 
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -158,7 +166,7 @@ final String? password = prefs.getString('password');
                 ),
               ),
 
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
 
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -166,14 +174,14 @@ final String? password = prefs.getString('password');
                   // google button
                   SquareTile(imagePath: 'assets/google.png'),
 
-                  SizedBox(width: 25),
+                  SizedBox(width: 10),
 
                   // apple button
                   SquareTile(imagePath: 'assets/apple.png')
                 ],
               ),
 
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
 
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,

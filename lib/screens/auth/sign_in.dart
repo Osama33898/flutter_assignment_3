@@ -63,7 +63,7 @@ await pref.setString('user_name', usernameController.text as String);
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const SizedBox(height: 50),
+              const SizedBox(height: 10),
 
               // logo
               const Icon(
@@ -72,7 +72,7 @@ await pref.setString('user_name', usernameController.text as String);
               ),
 
             
-              const SizedBox(height: 25),
+              const SizedBox(height: 10),
 
               // username textfield
               MyTextField(
@@ -112,7 +112,7 @@ await pref.setString('user_name', usernameController.text as String);
                 ),
               ),
 
-              const SizedBox(height: 25),
+              const SizedBox(height: 10),
 
               // sign in button
               MyButton(
@@ -120,7 +120,7 @@ await pref.setString('user_name', usernameController.text as String);
                 textBtn: 'Sign In',
               ),
 
-              const SizedBox(height: 50),
+              const SizedBox(height: 10),
 
               // or continue with
               Padding(
@@ -150,7 +150,7 @@ await pref.setString('user_name', usernameController.text as String);
                 ),
               ),
 
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
 
               // google + apple sign in buttons
               Row(
@@ -159,14 +159,14 @@ await pref.setString('user_name', usernameController.text as String);
                   // google button
                   SquareTile(imagePath: 'assets/google.png'),
 
-                  SizedBox(width: 25),
+                  SizedBox(width: 10),
 
                   // apple button
                   SquareTile(imagePath: 'assets/apple.png')
                 ],
               ),
 
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
 
           
               // not a member? register now
